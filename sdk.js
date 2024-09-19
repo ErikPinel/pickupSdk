@@ -266,7 +266,7 @@
             show: function () {
                 var _self = this;
                 $(window).unbind('resize');
-                $(window).resize(function ($) {
+                $(window).on('resize', { passive: true }, function ($) {
                     _self.calculateSizes(true);
                 });
 
